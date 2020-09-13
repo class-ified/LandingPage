@@ -1,0 +1,288 @@
+// TYPOGRAPHY
+@font-face {
+    font-family: 'Eina01';
+    src: url(/fonts/Eina01-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Eina01';
+    src: url(/fonts/Eina01-Regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Eina01';
+    src: url(/fonts/Eina01-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Eina03';
+    src: url(/fonts/Eina03-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url(/fonts/sofiapro-light.otf);
+    font-weight: normal;
+}
+
+$font-primary: 'Eina01';
+$font-secondary: 'Eina03';
+$font-tertiary: 'Sofia Pro';
+
+
+
+
+// COLORS
+$color-white: #ffffff;
+$color-orange: #F68360;
+$color-grey-light: #4f4f4f;
+$color-grey-dark: #333333;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;    
+}
+
+body {
+    font-family: $font-primary;
+}
+
+.landing {
+    height: 100vh;
+
+    .container {
+        // background-color: red;
+        width: 39vw;
+        margin: 0 auto;
+
+        h1 {
+            color: $color-orange;
+            font-size: 6.7rem;
+            text-align: center;
+        }
+
+        p {
+            color: $color-grey-light;
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+}
+
+.join {
+    height: 100vh;
+    background-image: url(/images/section2background.png);
+    background-size: 100% 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    // margin: 15% auto;
+
+
+    .container {
+        width: 60vw;
+        margin-top: 8vw;
+
+        &_plan {
+            width: 100%;
+            padding: 2vw 3.5vw 2.5vw 3.5vw;
+            background-color: $color-white;
+            border-radius: .5rem;
+            margin-bottom: 3rem;
+
+            .heading {
+                color: $color-grey-dark;
+                font-size: 4.8rem;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .text {
+                color: $color-grey-light;
+                padding: 0;
+                font-size: 2.8rem;
+                text-align: center;
+            }
+        }
+
+        &_pricing {
+            width: 100%;
+            padding: 2vw;
+            background-color: $color-orange;
+            border-radius: .5rem;
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: space-between;
+            color: $color-white;
+            align-items: center;            
+
+            .price {
+                font-size: 4rem;
+                font-weight: 600;
+            }
+
+            .details {
+                display: flex;
+                flex-direction: column;
+
+                .head {
+                    font-size: 3.6rem;
+                    text-align: right;
+                }
+
+                .text {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;            
+            margin: 0 auto;
+            padding: 1rem 4rem;
+            background-color: $color-orange;
+            border: none;
+            border-radius: .5rem;   
+            color: $color-white;   
+            font-size: 2rem;    
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.connection {
+    width: 100%;
+    // background-color: blue;
+
+    .container {
+        width: 100%;
+        height: 80vh;
+        // background-color: blue;
+        padding-top: 10vh;
+        // position: relative;
+        // overflow: hidden;
+
+        .text_box {
+            width: 41vw;
+            // background-color: red;
+            margin: 0 auto;
+            margin-bottom: 30rem;
+
+            .heading {
+                font-family: $font-secondary;
+                font-size: 2.8rem;
+                text-align: center;
+                font-weight: 600;
+                color: $color-grey-dark;
+                margin-bottom: 2.5rem;
+            }
+
+            .text {
+                font-family: $font-tertiary;
+                color: $color-grey-light;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 30px;
+            }
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            // position: relative;
+            // left: 0;
+            // right: 0;
+
+            &__column {
+                width: 16.5%;                    
+
+                &:not(:last-child) {
+                    margin-right: 2em;                        
+                }
+
+                &-2 {
+                    margin-top: 5em;
+                }
+
+                &-3 {
+                    margin-top: 9em;
+                }
+
+                &-4 {
+                    margin-top: 7em;
+                }
+
+                &-5 {
+                    margin-top: 2em;
+                }
+
+                &-7 {
+                    margin-top: 1em;
+                }
+
+                .image {
+                    &:not(:last-child) {
+                        margin-bottom: 2em;
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__column-small {
+                width: 8.75% !important;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
